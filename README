@@ -1,0 +1,72 @@
+
+Controllers
+===========
+
+- Application.java:
+
+  Contains general functionality of the application (loading pages, login, general game mechanics etc..)
+
+
+Model
+==========
+
+- Quizquestion.java:
+
+  Contains model for the questions in the Quiz - Question, all possible answers, right answer - and loads Quiz data from DB
+
+- Recipe.java:
+
+  Contains model of a Recipe - name, required ingredients & actions as well as a toString method - and loads the instructions from DB
+
+- User.java:
+
+  Contains model of a User - name, id, password, status, number of cookies, recipes and ingredients owned - automatically sets data (except for password and name) when a user registers
+  Also includes functions relevant to a user, like buying wares, changing the status etc...
+
+- Ware.java:
+
+  Contains model of a Ware - id, name and price - as well as an equals method and all relevant getters/setters
+
+
+Views
+==========
+
+- gamesinstructions.scala.html
+
+  Displays a text- and picture-based tutorial for the game (always shown after register and manually viewable later on)
+
+
+- kochbuch.scala.html
+
+  Shows all available recipes and their instructions,
+  includes reference to kitchen by choosing a recipe to cook as well as an option to buy recipes the user does not own yet
+
+
+- kueche.scala.html
+
+  Includes the cooking functionality for the user -> User chooses action through checkbox and drags ingredient into the pot
+
+
+- login.scala.html
+
+  Includes options to login or register into the game
+
+
+- main.scala.html
+
+  Includes the menu displayed on every page
+
+
+- memory.scala.html
+
+  Shows memory board with 16 memory tiles
+
+
+- quizseite.scala.html
+
+  Includes the quiz - displays question as well as four possible answers and feedback to the chosen answer
+
+
+- supermarkt.scala.html
+
+  Displays all wares the user doesn't own with their prices and the option to purchase said wares
