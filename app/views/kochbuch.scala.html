@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/kochbuch.css")">
+        <title>Kochbuch</title>
+        <script src="@routes.Assets.versioned("javascripts/kochbuch.js")"></script>
+    </head>
+
+        <!------------- Cookbook: shows all available recipes and their instruction when selected --------------->
+
+    <body>
+        <div id="book">
+            <table >
+                <tr>
+                    <td>
+                        <h2> Inhaltsverzeichnis</h2>
+                    </td>
+                    <td>
+                        <h2 id="title"> Omas Kochbuch</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <!--- Shows all recipenames, when selected the instruction get loaded and shown on the right page --->
+
+                        <ul id = "recipenames">
+                            <li class="rcp" id = "rezept0" onclick="recipeForCookbook(0)"></li>
+                            <li class="rcp" id = "rezept1" onclick="recipeForCookbook(1)"></li>
+                            <li class="rcp" id = "rezept2" onclick="recipeForCookbook(2)"></li>
+                            <li class="rcp" id = "rezept3" onclick="recipeForCookbook(3)"></li>
+                            <li class="rcp" id = "rezept4" onclick="recipeForCookbook(4)"></li>
+                            <li class="rcp" id = "rezept5" onclick="recipeForCookbook(5)"></li>
+                            <li class="rcp" id = "rezept6" onclick="recipeForCookbook(6)"></li>
+                            <li class="rcp" id = "rezept7" onclick="recipeForCookbook(7)"></li>
+                            <li class="rcp" id = "rezept8" onclick="recipeForCookbook(8)"></li>
+                        </ul>
+                    </td>
+                    <td id="page" VALIGN="TOP" ALIGN="CENTER">
+
+                            <!--- Shows the instruction of selected recipe and
+                                - a link to the kitchen to cook the recipe, if user owns recipe or
+                                - a link to buy the recipe  ------->
+
+                        <h3 id = "headline" > Willkommen zu Omas Kochbuch!</h3>
+                        <p id="instruction"> Links kannst du dir ein Rezept aussuchen, das du gerne kochen möchtest. </p>
+                        <a id = "link"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

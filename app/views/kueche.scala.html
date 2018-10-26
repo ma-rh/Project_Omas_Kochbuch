@@ -1,0 +1,179 @@
+@(recipe: String)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/kueche.css")">
+        <script src="@routes.Assets.versioned("javascripts/kueche.js")"></script>
+        <title>Küche</title>
+    </head>
+
+        <!----------------------the Kitchen shows wares and actions, which are used for cooking-------------------------->
+
+    <body>
+        <main>
+            <h2 id="rezeptnummer">@recipe</h2>
+                <!-- radiobuttons with actions, which are token by the user in combination with one ware-->
+            <div id="aktionen">
+                <fieldset >
+                    <h3 class="headlines">Aktionen</h3>
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="radio" id = "abschmecken" name="aktion" value="abschmecken" onclick = getAction("abschmecken")>
+                                abschmecken
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "anbraten" name="aktion" value="anbraten" onclick = getAction("anbraten")>
+                                anbraten
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "belegen" name="aktion" value="belegen" onclick = getAction("belegen")>
+                                belegen
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "hinzufügen" name="aktion" value="hinzufügen" onclick = getAction("hinzufügen")>
+                                hinzufügen
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "kochen" name="aktion" value="kochen" onclick = getAction("kochen")>
+                                kochen
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "kochen_und_pürieren" name="aktion" value="kochen_und_pürieren" onclick = getAction("kochen_und_pürieren")>
+                                kochen und pürieren
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "reiben" name="aktion" value="reiben" onclick = getAction("reiben")>
+                                reiben
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id="schneiden" name="aktion" value="schneiden" onclick = getAction("schneiden")>
+                                schneiden
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "toasten" name="aktion" value="toasten" onclick = getAction("toasten")>
+                                toasten
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" id = "waschen" name="aktion" value="waschen" onclick = getAction("waschen")>
+                                waschen
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+
+                <!-- here the user has to drag the wares for cooking -->
+            <div id="kochtopf" ondragover="ablegenErlauben(event)" ondrop="ablegen(event)">
+                <h3 class="headlines">Arbeitsfläche</h3>
+            </div>
+
+                <!-- here the ware are choosen by the user and drag to the cookingplace -->
+            <table id="lebensmittel">
+                <tr>
+                        <!--<h3 class="headlines">Lebensmittel</h3>-->
+                    <td><img class="ware" draggable="true" ondragstart="ziehen(event)" id="passierte Tomaten" src="@routes.Assets.versioned("images/passierte_tomaten.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Nudeln" src="@routes.Assets.versioned("images/Nudeln-Penne.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Zwiebeln" src="@routes.Assets.versioned("images/produktbilder_gross_zwiebel.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Kürbis" src="@routes.Assets.versioned("images/Kuerbis.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Hackfleisch" src="@routes.Assets.versioned("images/hackfleischbulette.jpg")" width="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Reis" src="@routes.Assets.versioned("images/reis.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Salat" src="@routes.Assets.versioned("images/Salat.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Tomaten" src="@routes.Assets.versioned("images/Tomate.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Burgerbrötchen" src="@routes.Assets.versioned("images/hamburgerbroetchen.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Putenstreifen" src="@routes.Assets.versioned("images/putenstreifen.jpg")" width="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Käse" src="@routes.Assets.versioned("images/Kaese.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Balsamico-Essig" src="@routes.Assets.versioned("images/Balsamico-Essigl.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Fetakäse" src="@routes.Assets.versioned("images/Fetakaese.png")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Olivenöl" src="@routes.Assets.versioned("images/olivenoel.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Sahne" src="@routes.Assets.versioned("images/Sahne.png")" width="80px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Gemüsebrühe" src="@routes.Assets.versioned("images/Gemüsebrühe.png")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Weißwein" src="@routes.Assets.versioned("images/Weißwein.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Brokkoli" src="@routes.Assets.versioned("images/Brokkoli.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Champignons" src="@routes.Assets.versioned("images/Champignons.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Kidneybohnen" src="@routes.Assets.versioned("images/Kidneybohnen.jpg")" width="80px">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Mais" src="@routes.Assets.versioned("images/Mais.jpg")" width="80px">
+                    </td>
+                    <td>
+                        <img class="ware" draggable="true" ondragstart="ziehen(event)" id="Paprika" src="@routes.Assets.versioned("images/Paprika.jpg")" width="80px">
+                    </td>
+                </tr>
+            </table>
+
+                <!-- the grandmom gives support and error messages to the user -->
+            <div id="grandmom">
+                <img id="granny" src="@routes.Assets.versioned("images/Granny.png")">
+            </div>
+            <div id="sprechblase"> Bitte wähle zuerst links eine Aktion aus und ziehe dann die zugehörige Zutat auf die Arbeitsfläche.</div>
+
+        </main>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<Project>
+  <Name>Kochbuch007</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Kochen</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="10" top="22" />
+        <Size width="491" height="434" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private int id { get; set; }</Member>
+        <Member type="Property">private String username { get; set; }</Member>
+        <Member type="Property">private String password { get; set; }</Member>
+        <Member type="Property">private String status { get; set; }</Member>
+        <Member type="Property">private int cookies { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;Ware&gt; warelist { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;Recipe&gt; ownedRecipes { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;Ware&gt; warenListAll { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;Recipe&gt; recipesAll { get; set; }</Member>
+        <Member type="Property">private int currentRecipe { get; set; }</Member>
+        <Member type="Constructor">public User(String username, String password)</Member>
+        <Member type="Constructor">public User(int id, String username, String password, String status, int cookies)</Member>
+        <Member type="Method">public static boolean create(int userid, String username, String password, String status, int cookies)</Member>
+        <Member type="Method">public int getAnzahlUser()</Member>
+        <Member type="Method">public void getWareFromDatabase()</Member>
+        <Member type="Method">public void getRecipeFromDatabase()</Member>
+        <Member type="Method">public void putDataInDatabase()</Member>
+        <Member type="Method">public void changeCookies(int cookiesValue, boolean userGetCookies)</Member>
+        <Member type="Method">public void buyWare(String wareToBuy)</Member>
+        <Member type="Method">public void increaseStatus()</Member>
+        <Member type="Method">public void buyNewRecipe()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Ware</Name>
+        <Access>Public</Access>
+        <Location left="721" top="365" />
+        <Size width="186" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private int id { get; set; }</Member>
+        <Member type="Property">private String warename { get; set; }</Member>
+        <Member type="Property">private int price { get; set; }</Member>
+        <Member type="Constructor">public Ware(int id, String warename, int price)</Member>
+        <Member type="Method">public boolean equals(Object o)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Quizquestion</Name>
+        <Access>Public</Access>
+        <Location left="991" top="116" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private String question { get; set; }</Member>
+        <Member type="Property">private String answerA { get; set; }</Member>
+        <Member type="Property">private String answerB { get; set; }</Member>
+        <Member type="Property">private String answerC { get; set; }</Member>
+        <Member type="Property">private String answerD { get; set; }</Member>
+        <Member type="Property">private String rigthAnswer { get; set; }</Member>
+        <Member type="Constructor">public Quizquestion()</Member>
+        <Member type="Method">public int random(int maximum)</Member>
+        <Member type="Method">public int getNumbersOfQuestions()</Member>
+        <Member type="Method">public String[] getQuizquestionFromDB(int id)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Recipe</Name>
+        <Access>Public</Access>
+        <Location left="721" top="33" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">private int id { get; set; }</Member>
+        <Member type="Property">private String name { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;Ware&gt; ingredients { get; set; }</Member>
+        <Member type="Property">private ArrayList&lt;String&gt; actions { get; set; }</Member>
+        <Member type="Property">private String instruction { get; set; }</Member>
+        <Member type="Constructor">public Recipe(int id, String dishname)</Member>
+        <Member type="Method">public void cookingInstructions()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>*</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>*</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>*</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

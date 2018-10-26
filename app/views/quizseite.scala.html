@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/quizseite.css")">
+        <script src="@routes.Assets.versioned("javascripts/quizseite.js")"></script>
+        <title>Quiz</title>
+    </head>
+    <body>
+            <!--------------------- the quizseite displays questions ----------------------------------------------->
+
+            <!-- the textarea gets filled with the questions -->
+        <form id="Status&Steuerung">
+            <textarea id="areaQuestion" rows="4" cols="40" disabled ></textarea> <br>
+        </form>
+
+            <!-- here are four possible answers displayed with type radio-buttons, so only one is the right answer -->
+        <div id = "fragen">
+            <form id="radioAnswers">
+                <br>
+                <input type="radio" id="radioA" name="radioAnswer" value="A">
+                <label for="radioA" id="labelAnswerA"></label> <br> <br>
+                <input type="radio" id="radioB" name="radioAnswer" value="B">
+                <label for="radioB" id="labelAnswerB"></label> <br> <br>
+                <input type="radio" id="radioC" name="radioAnswer" value="C">
+                <label for="radioC" id="labelAnswerC"></label> <br> <br>
+                <input type="radio" id="radioD" name="radioAnswer" value="D">
+                <label for="radioD" id="labelAnswerD"></label> <br> <br>
+            </form>
+        </div>
+
+            <!-- here are the buttons so check if the right answer is choosen and to get the next question -->
+        <div id = "foot">
+            <form>
+                <input type="submit" id="submitOK" value="OK">
+                <input type="submit" id="submitNext" value="Nächste Frage"> <br> <br>
+
+                    <!-- the label gives feedback, if the right answer was choosen or not -->
+                <label id="labelNote"></label>
+            </form>
+        </div>
+    </body>
+</html>

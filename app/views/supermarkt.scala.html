@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/supermarkt.css")">
+        <script src="@routes.Assets.versioned("javascripts/supermarkt.js")"></script>
+        <title>Supermarkt</title>
+    </head>
+
+        <!------------- Supermarket: displays all ware user can buy with price. User can select one ware and buy it --------------->
+
+    <body>
+        <form>
+            <table border="3">
+                <tr id = "row1">
+                    <td class="zutat" id="Kürbis">
+                        <figure>
+                            <img id="Kürbis" src="@routes.Assets.versioned("images/Kuerbis.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Kürbis" onclick=getWare("Kürbis")>
+                        Kürbis
+                    </td>
+
+                    <td class="zutat" id="Hackfleisch">
+                        <figure>
+                            <img id="Hackfleisch" src="@routes.Assets.versioned("images/hackfleischbulette.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Hackfleisch" onclick=getWare("Hackfleisch")>
+                        Hackfleisch
+                    </td>
+                    <td class="zutat" id="Reis">
+                        <figure>
+                            <img id="Reis" src="@routes.Assets.versioned("images/reis.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Reis" onclick=getWare("Reis")>
+                        Reis
+                    </td>
+                    <td class="zutat" id="Salat">
+                        <figure>
+                            <img id="Salat" src="@routes.Assets.versioned("images/Salat.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Salat" onclick=getWare("Salat")>
+                        Salat
+                    </td>
+                </tr >
+                <tr id = "row2">
+                    <td class="zutat" id="Burgerbrötchen">
+                        <figure>
+                            <img id="Burgerbrötchen" src="@routes.Assets.versioned("images/hamburgerbroetchen.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Burgerbrötchen" onclick=getWare("Burgerbrötchen")>
+                        Burgerbrötchen
+                    </td>
+                    <td class="zutat" id="Tomaten">
+                        <figure>
+                            <img id="Tomaten" src="@routes.Assets.versioned("images/Tomate.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Tomaten" onclick=getWare("Tomaten")>
+                        Tomaten
+                    </td>
+                    <td class="zutat" id="Putenstreifen">
+                        <figure>
+                            <img id="Putenstreifen" src="@routes.Assets.versioned("images/putenstreifen.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Putenstreifen" onclick=getWare("Putenstreifen")>
+                        Putenstreifen
+                    </td>
+                    <td class="zutat" id="Käse">
+                        <figure>
+                            <img id="Käse" src="@routes.Assets.versioned("images/Kaese.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Käse" onclick=getWare("Käse")>
+                        Käse
+                    </td>
+                </tr >
+                <tr id = "row3">
+                    <td class="zutat" id="Balsamico-Essig">
+                        <figure>
+                            <img id="Balsamico-Essig" src="@routes.Assets.versioned("images/Balsamico-Essigl.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Balsamico-Essig" onclick=getWare("Balsamico-Essig")>
+                        Balsamico-Essig
+                    </td>
+                    <td class="zutat" id="Fetakäse">
+                        <figure>
+                            <img id="Fetakäse" src="@routes.Assets.versioned("images/Fetakaese.png")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Fetakäse" onclick=getWare("Fetakäse")>
+                        Fetakäse
+                    </td>
+                    <td class="zutat" id="Olivenöl">
+                        <figure>
+                            <img id="Olivenöl" src="@routes.Assets.versioned("images/olivenoel.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Olivenöl" onclick=getWare("Olivenöl")>
+                        Olivenöl
+                    </td>
+
+                    <td class="zutat" id="Sahne">
+                        <figure>
+                            <img id="Sahne" src="@routes.Assets.versioned("images/Sahne.png")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Sahne" onclick=getWare("Sahne")>
+                        Sahne
+                    </td>
+                </tr >
+                <tr id = "row4">
+                    <td class="zutat" id="Gemüsebrühe">
+                        <figure>
+                            <img id="Gemüsebrühe" src="@routes.Assets.versioned("images/Gemüsebrühe.png")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Gemüsebrühe" onclick=getWare("Gemüsebrühe")>
+                        Gemüsebrühe
+                    </td>
+                    <td class="zutat" id="Weißwein">
+                        <figure>
+                            <img id="Weißwein" src="@routes.Assets.versioned("images/Weißwein.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Weißwein" onclick=getWare("Weißwein")>
+                        Weißwein
+                    </td>
+                    <td class="zutat" id="Brokkoli">
+                        <figure>
+                            <img id="Brokkoli" src="@routes.Assets.versioned("images/Brokkoli.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Brokkoli" onclick=getWare("Brokkoli")>
+                        Brokkoli
+                    </td>
+                    <td class="zutat" id="Champignons">
+                        <figure>
+                            <img id="Champignons" src="@routes.Assets.versioned("images/Champignons.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Champignons" onclick=getWare("Champignons")>
+                        Champignons
+                    </td>
+                </tr >
+                <tr id = "row5">
+                    <td class="zutat" id="Kidneybohnen">
+                        <figure>
+                            <img id="Kidneybohnen" src="@routes.Assets.versioned("images/Kidneybohnen.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Kidneybohnen" onclick=getWare("Kidneybohnen")>
+                        Kidneybohnen
+                    </td>
+                    <td class="zutat" id="Paprika">
+                        <figure>
+                            <img id="Paprika" src="@routes.Assets.versioned("images/Paprika.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Paprika" onclick=getWare("Paprika")>
+                        Paprika
+                    </td>
+                    <td class="zutat" id="Mais">
+                        <figure>
+                            <img id="Mais" src="@routes.Assets.versioned("images/Mais.jpg")">
+                        </figure>
+                        <p class = "wareprice"> test </p>
+                        <input type="checkbox" id="Mais" onclick=getWare("Mais")>
+                        Mais
+                    </td>
+                </tr>
+            </table>
+            <br> <br>
+
+                <!----------- By clicking on button "Kaufen" user buys ware from the supermarket ------------>
+
+            <input type="submit" id="submitKaufen" value="Kaufen" onclick = buyFromSupermarket()>
+
+        </form>
+    </body>
+
+</html>

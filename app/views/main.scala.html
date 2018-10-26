@@ -1,0 +1,42 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>@title</title>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script src="@routes.Assets.versioned("javascripts/main.js")"></script>
+    </head>
+
+        <!------------- Main: Basic content for all pages except login --------------->
+
+    <body>
+
+            <!------------ Menu with links to all pages and logout -------->
+        <ul id = "main">
+            <li class="menupunkt"><a href="kochbuch">Kochbuch</a></li>
+            <li class="menupunkt"><a href="supermarkt">Supermarkt</a></li>
+            <li class="menupunkt"><a href="quizseite">Quiz</a></li>
+            <li class="menupunkt"><a href="memory">Memory</a></li>
+            <li class="menupunkt"><a href="gameinstructions" id = "helpbutton"><img src="@routes.Assets.versioned("images/help_button.jpg")" width="20px" height="20px"> </a></li>
+            <li id="logout" class="menupunkt"><a href="logout">Logout</a></li>
+
+        </ul>
+
+        <h1>@title</h1>
+
+        <table id = "display">
+
+                <!------------ Shows how many cookies user owns and status -------->
+            <tr>
+                <th id="cookiePicture"><img src="@routes.Assets.versioned("images/cookies.jpg")" width="50px" height="50px"></th>
+                <th id = "cookies"></th>
+                <th id = "status"></th>
+            </tr>
+        </table>
+
+        @content
+    </body>
+</html>

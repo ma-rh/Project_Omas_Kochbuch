@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/game_instructions.css")">
+        <title>Einleitung</title>
+    </head>
+
+        <!------------- Tutorial for the website: shows different pages and what to do --------------->
+
+    <body>
+
+        <h1> Spieleanleitung </h1>
+
+            <!------------- Describes Cookbook -------------->
+        <div id = "cookbook">
+            <br>
+            <h1> Willkommen bei Omas Kochkurs </h1>
+            <br>
+            <p>In Omas Kochbuch kannst du Rezepte nachschlagen und dir ein Rezept auswählen, das du kochen möchtest.</p>
+            <p>Merke dir die Instruktionen gut!</p>
+            <p>Mit deinen Cookies kannst du jederzeit neue Rezepte zum Kochen freischalten.</p>
+            <img id = "pic1" src="@routes.Assets.versioned("images/7.PNG")">
+            <br> <br>
+        </div>
+        <br>
+
+            <!----------- Describes Kitchen ----------------->
+        <div id = "kitchen">
+            <br>
+            <p> In der Küche wählst du erst eine Aktion aus. Ziehe dann das entsprechende Lebensmittel auf deine Arbeitsfläche.</p>
+            <p> Führe das mit allen Waren durch, die du für das Rezept benötigst. </p>
+            <p> Hast du die Lebensmittel richtig verarbeitet und in der richtigen Reihenfolge gekocht, erhälst du zur Belohnung 5 Cookies!</p>
+            <img id = "pic2" src="@routes.Assets.versioned("images/Küche.PNG")">
+            <br> <br>
+        </div>
+        <br>
+
+            <!------------- Describes Supermarket -------------->
+        <div id = "supermarket">
+            <br>
+            <p> Hast du neue Rezepte freigeschaltet, musst du auch zusätzliche Lebensmittel im Supermarkt mit deinen Cookies einkaufen.</p>
+            <img id = "pic3" src="@routes.Assets.versioned("images/4.PNG")">
+            <br>
+            <br>
+        </div>
+        <br>
+
+            <!------------- Describes Quiz -------------->
+        <div id = "quiz">
+            <br>
+            <p>Weitere Cookies erspielen kannst du durch das Quiz. Hier werden dir Fragen rund um das Thema Kochen gestellt.</p>
+            <p>Für jede richtig beantwortete Frage erhälst du 1 Cookie!</p>
+            <img id = "pic4" src="@routes.Assets.versioned("images/5.PNG")">
+            <br>
+            <br>
+        </div>
+        <br>
+
+            <!------------- Describes Memory -------------->
+        <div id="memory">
+            <br>
+            <p> Suche im Memory die passenden Paare. Hast du alle gefunden, erhälst du ebenfalls 1 Cookie!</p>
+            <img id = "pic5" src="@routes.Assets.versioned("images/6.PNG")">
+            <br>
+            <br>
+        </div>
+        <br>
+
+        <a href="kochbuch" id="start">Los geht's!</a>
+    </body>
+</html>
+

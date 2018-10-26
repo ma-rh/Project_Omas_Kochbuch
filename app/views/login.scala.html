@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" media = "screen" href="@routes.Assets.versioned("stylesheets/login.css")">
+        <script src="@routes.Assets.versioned("javascripts/login.js")"></script>
+        <title>Login</title>
+    </head>
+
+        <!-----------------the user can login oder register to start playing----------------------->
+
+    <body>
+        <div id = "inhalt">
+            <h1>Omas Kochkurs</h1>
+
+            <div>
+                <p>
+
+                        <!-- here is the login-form-->
+                </p>
+            </div>
+            <div id = "einloggen">
+                <form>
+                    Name: <input id="name" class="name" type="text">
+                    <br><br>
+                    Passwort: <input id="password" class="passwort" type="password">
+                </form>
+
+                <br>
+
+                <form>
+                    <input id="login" type="button" value="Login" onclick="einloggen()">
+                </form>
+            </div>
+                <br>
+
+                <!-- here's the registration-form -->
+            <div id = "registrieren">
+                <form>
+                    Name: <input id="reg_name" class="name" type="text">
+                    <br><br>
+                    Passwort: <input id="reg_password" class="passwort" type="password">
+                    <br><br>
+                    Wiederholung: <input id="reg_pw_repeat" class="passwort" type="password">
+                </form>
+                <br>
+
+                <form>
+                    <input id="register" type="button" value="Registrieren" onclick="registrieren()">
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
