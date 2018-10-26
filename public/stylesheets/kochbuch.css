@@ -1,0 +1,46 @@
+#title {
+    font-size: 2.0em;
+}
+
+#recipenames {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+    height: 400px;
+    width: 50%;
+    padding: 10px;
+}
+
+table {
+    background-image: url("../images/book.png");
+    background-size: 100% 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+td {
+    width: 50%;
+}
+
+.rcp {
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #003858;
+    color: white;
+}
+
+#page {
+    font-size: 20px;
+    line-height: 22px;
+    position: relative;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 22px;
+}

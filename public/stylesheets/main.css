@@ -1,0 +1,50 @@
+body {
+    background-image: url("../images/tapetenhintergrund.jpg");
+    font-family: Arial;
+    text-align: center;
+}
+
+#main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menupunkt {
+    float: left;
+}
+
+#logout {
+    float: right;
+}
+
+h1 {
+    background-color: white;
+    text-align: center;
+    width: 8em;
+    padding: 14px;
+    margin: 0 auto;
+}
+
+#display {
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+    width: 30em;
+    height: 0.5em;
+    background: white;
+}
+
+.menupunkt a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menupunkt a:hover {
+    background-color: #111;
+}

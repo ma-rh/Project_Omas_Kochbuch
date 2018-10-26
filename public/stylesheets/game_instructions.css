@@ -1,0 +1,81 @@
+body {
+    background-color: #CCCCCC;
+    text-align: center;
+    font-family: Arial;
+}
+
+#pic2 {
+    width: 60%;
+    height: 60%;
+}
+
+#pic3 {
+    width: 50%;
+    height: 50%;
+}
+
+#pic4 {
+    width: 35%;
+    height: 35%;
+}
+
+#pic5 {
+    width: 35%;
+    height: 35%;
+}
+
+#pic1 {
+    width: 70%;
+    height: 70%;
+}
+
+#cookbook {
+    display: block;
+    color: black;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+    width: 70em;
+}
+
+#kitchen {
+    display: block;
+    color: black;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+    width: 70em;
+}
+
+#supermarket {
+    display: block;
+    color: black;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+    width: 70em;
+}
+
+#quiz, #memory {
+    display: block;
+    color: black;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    margin: 0 auto;
+    width: 70em;
+}
+
+#start {
+    width: 10em;
+    display: block;
+    color: white;
+    background-color: #1a84ff;;
+    padding: 10px 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 3px;
+}

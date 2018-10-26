@@ -1,0 +1,56 @@
+h1 {
+    font-family: Arial;
+    text-align: center;
+}
+
+#fragen, #foot {
+    width: 30em;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0px auto;
+}
+
+label {
+    font-family: Arial;
+}
+
+h1 {
+    font-family: Arial;
+}
+
+#submitNext, #submitOK {
+    font-family: Arial;
+    width: 100px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 5px;
+    background: #1a84ff;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#submitOK:hover, #submitNext:hover {
+    background: black;
+}
+
+body {
+    text-align: center;
+}
+
+textarea {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: Arial;
+    overflow: hidden;
+    resize: none;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+#radioAnswers {
+    font-family: Arial;
+    text-align: left;
+    display: inline;
+}

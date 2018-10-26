@@ -1,0 +1,24 @@
+div#memory_board {
+    background: #CCC;
+    border: #999 3px solid;
+    width: 550px;
+    height: 550px;
+    padding: 24px;
+    margin: 0px auto;
+    border-radius: 3px;
+}
+
+div#memory_board > div {
+    background: url("../images/cookies.jpg");
+    background-size: 50% 50%;
+    border: #000 3px solid;
+    width: 71px;
+    height: 71px;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    font-size: 64px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
